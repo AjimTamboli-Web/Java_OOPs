@@ -16,6 +16,14 @@ public class Inheritance {
 		bob.bark();  // Dog's own method
 		bob.eat();   // inherited from Animal
 		bob.run();   // inherited from Animal
+		
+		System.out.println("*****************");
+		
+		Vehicle ford = new Vehicle();
+		ford.door(2);  // inherited from Car class
+		ford.honk();   // inherited from Car class
+		ford.style();  // Vehicle's own method
+		ford.powerStaring(); // inherited from Car class
 	}
 
 }
@@ -40,3 +48,30 @@ class Dog extends Animal {    // Child class/ Subclass
 		System.out.println("bow bow...");
 	}
 }
+
+class Car{
+	public void powerStaring() {
+		System.out.println("Power-Staring....");
+	}
+	public int door(int a) {
+		System.out.println( a + " door");
+		return a;
+	}
+	public void honk() {
+		System.out.println("Tuut tuuu.....");
+	}
+}
+
+class Vehicle extends Car{
+	public void style() {
+		System.out.println("This is Sport car.");
+	}
+}
+
+
+
+
+
+
+
+
