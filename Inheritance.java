@@ -6,6 +6,11 @@ package java_OOPs;
  *    It promotes code reusability and method overriding.
  *    The keyword (extends) is used to inherit from a parent class.
  *     
+ *  Types of Inheritance: 1) Single level inheritance
+ *  						  2) Multiple inheritance
+ *  						  3) Hybrid inheritance
+ *  						  4) Hierarchical inheritance
+ *             			  5) Multilevel inheritance   
  */
 
 public class Inheritance {
@@ -43,7 +48,7 @@ class Animal{     // Parent claa/ Super class/ Base class
 	}	
 }
 
-class Dog extends Animal {    // Child class/ Subclass
+class Dog extends Animal {    // Child class/ Subclass/ Derived Class
 	public void bark() {
 		System.out.println("bow bow...");
 	}
