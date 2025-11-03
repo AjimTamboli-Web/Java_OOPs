@@ -7,6 +7,8 @@ package java_OOPs;
  * In short a same thing can perform/ can have different implementation.
  *  - The ability of an object, method or operator to take on different behaviors based on context.
  
+ 	Why use? -> Code Reusability, Flexibility, Abstraction, Dynamic Behavior.
+ 
  *  Types of Polymorphism :-
  *  1) Compile-time/ static/ Early binding/ method overloading Polymorphism.
  *  2) Rum-time/ Dynamic/ Late binding/ method overriding Polymorphism.
