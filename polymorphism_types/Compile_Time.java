@@ -31,6 +31,8 @@ public class Compile_Time {
         math.add(12, 32);
         math.add(12, 32.9f);
         math.add(12.9, 12.3);
+        
+        math.add("Previous Operarator + addition, ", " Current Operator + Concatination");
 	}
 
 }
@@ -64,8 +66,11 @@ class Mathema{
 	final void add(int a,float b) {
 		System.out.println("Final Method2 : " + (a + b));
 	}
-	void add(double a, double b) {
+	final void add(double a, double b) {
 		System.out.println("Final Method3 : " + (a + b));
+	}
+	void add(String a,String b) {
+		System.out.println("Operator Overloading: " + a + b);
 	}
 }
 
