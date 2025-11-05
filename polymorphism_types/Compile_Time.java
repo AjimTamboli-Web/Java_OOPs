@@ -10,7 +10,7 @@ package java_OOPs.polymorphism_types;
  *  Java decide which method call at compile time, based on the arguments.
  *  It binds the correct method before running the program. ➡️ Hence called Static Binding.
  *  In compile-time you can also use static methods and final methods in overloading.
-
+ *  In overloading when someone change another method's return type or access modifier change still it consider the same method.
  */
 
 public class Compile_Time {
@@ -50,6 +50,12 @@ class Mathema{
 	public void multi(double a, int b) {
 		System.out.println( "Method 4 : " + a * b);
 	}
+	
+	// it does not overload the primitive using it get error it happen only signature method using
+//	public int multi(double a, int b) {
+//		System.out.println("mehtod 5 " + a * b);
+//		return 23;
+//	}
 	
 	// In Compile time polymorphism Static method can be overloaded.
 	public static void div(int a,int b) {
