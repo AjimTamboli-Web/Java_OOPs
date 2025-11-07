@@ -6,9 +6,14 @@ package java_OOPs.polymorphism_types;
  * Even though the reference of type Parent, the Child's method is executed because the object type decides at runtime.
  * When an overridden method is called through a superclass reference, Java determines which version(superclass/subclasses) 
    of that method is to be executed based upon the type of the object being referred to at the time the call occurs. 
+ *  You can not override the final and static method but you can use method hiding for static method.
+ *    static is class level use that's why its not use overriding.
  *   
- *   Method Hiding ->> 
- *   
+ *   Method Hiding ->> It happens only Static methods when you create same name method in child class that time
+                                parent class method got hidden.
+                         Because static work on classes directly .
+ *** At compile time it shows it run parent class method but actual runtime it runs child's class methods using polymorphic object(parent reference child's object) 
+       that's called dynamic method dispatch.
  */
 public class Dynamic_Method_Dispatch {
 
@@ -21,6 +26,13 @@ public class Dynamic_Method_Dispatch {
 		
 		para.greet1(); // which greet1() runs? Depends on the object (Child)
         para.show();
+        
+        Parent1.paren();
+        Child1.paren();
+        
+//        para.paren();  //o/p-> parent static because static does'nt work on object it shared all over same.
+      // paren() method is hide the parent paren() method.  
+        
 	}
 
 }
@@ -39,6 +51,9 @@ class Parent1{
 	Parent1(){
 		System.out.println("Parent Object/Constructor.");
 	}
+	public static void paren() {
+		System.out.println("Static Method from Parent......");
+	}
 }
 
 class Child1 extends Parent1{
@@ -51,5 +66,9 @@ class Child1 extends Parent1{
      Child1(){
     	 
     	 System.out.println("Child Object/Constructor.");
+     }
+     
+     public static void paren() {
+    	 System.out.println("Static Method from Child......");
      }
 }
