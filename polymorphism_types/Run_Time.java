@@ -11,6 +11,9 @@ package java_OOPs.polymorphism_types;
  * It follows Is-A relation Parent to Child  
  * Overriding always happens child class.   and JVM consider and accept only signature type.
  * JVM Override identify the only method signature not return type(primitive) or access modifier 
+ * You can't change the return type of the method in method overriding if it's primitive or void.
+ * 
+ * Extensibility - when you have access all the parent class property and in addition child class have own property also.
  */
 
 public class Run_Time {
