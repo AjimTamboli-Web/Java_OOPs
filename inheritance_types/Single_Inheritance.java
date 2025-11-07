@@ -13,7 +13,7 @@ public class Single_Inheritance {
 	// creating object of subclass invokes base class constructor.
 		
 		Car obj = new Car();
-
+		System.out.println(obj);
 	}
 
 }
