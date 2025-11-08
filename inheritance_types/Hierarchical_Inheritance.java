@@ -11,9 +11,9 @@ public class Hierarchical_Inheritance {
 	public static void main(String[] args) {
 		
 		IronMan tony = new IronMan();
-		
+		System.out.println(tony);
 		Captain steve = new Captain();
-
+		System.out.println(steve);
 	}
 
 }
