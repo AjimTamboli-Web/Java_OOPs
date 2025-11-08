@@ -21,8 +21,8 @@ public class Dynamic_Method_Dispatch {
 		
 		Parent1 para = new Child1(); // Parent reference, Child Object
 		
-	// Even though the reference type is parent, the method of the actual object (Child) will execute.
-		// That's Dynamic Method Dispatch - Java dynamically chooses which method version to call.
+	// Even though the reference type is parent, the method of the actual object (Child) will execute ↙️⬇️
+	            	// That's Dynamic Method Dispatch - Java dynamically chooses which method version to call.
 		
 		para.greet1(); // which greet1() runs? Depends on the object (Child)
         para.show();
