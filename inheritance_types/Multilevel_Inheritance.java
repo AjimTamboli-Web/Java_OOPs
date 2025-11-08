@@ -11,7 +11,7 @@ public class Multilevel_Inheritance {
 	public static void main(String[] args) {
 		
 		FastFive five = new FastFive();
-		
+		System.out.println(five);
 
 	}
 
