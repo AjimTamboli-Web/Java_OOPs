@@ -22,11 +22,13 @@ interface IRemote{
 	private void sliding() {     // Private  method
 		System.out.println("Slide Button feature");
 	}
+	
 	// public and default method
 	// default is special kind of method not access modifier
 	default public void autoSlide() {  // Needs a method body compulsory
 		sliding();  // using private method here
 	}
+	
 	// public and static method
 	static void companyName() {
 		System.out.println("Panasonic Remote");
@@ -38,6 +40,7 @@ class Tv implements IRemote{  // no mention default method (no compulsion)
 	Tv(){
 		IRemote.companyName(); //static method cannot be overridden
 	}
+	
 	@Override
 	public void on() {
 		System.out.println("Tv Power On");
