@@ -12,6 +12,7 @@ package java_OOPs.Abstractions;
  * 			⭕ Private methods can only be called inside default or static methods.
 			⭕ Static methods are accessed using the interface name, not via objects.
 			⭕ To implement an interface, use the implements keyword.
+* If a class implements multiple interfaces, or an interface extends multiple interfaces, it is known as multiple inheritance.
 * 			
  */
 
@@ -25,6 +26,8 @@ public class Interfaces_details {
 		cal.mul(3, 5);
 		cal.div(45, 2);
 		System.out.println(Icalculator.i);
+		((Calsy)cal).mod(23, 4);  // type casting
+		
 	}
 }
 interface Icalculator{  // interface declare
@@ -34,8 +37,12 @@ interface Icalculator{  // interface declare
 	void mul(int x,int y);
 	void div(int x,int y);
 }
-// class implementing interface
-class Calsy implements Icalculator{
+interface Iadvances{
+	void mod(int a,int b);
+}
+// class implementing interfaces
+
+class Calsy implements Icalculator,Iadvances{  //Multiple Inheritance
 	
 	// implementing the capability of interface
 	@Override
@@ -61,5 +68,12 @@ class Calsy implements Icalculator{
 	void display() {
 		System.out.println("This is Calsy for calculation.");
 	}
+
+	@Override
+	public void mod(int a, int b) {
+		System.out.println("Modulas: " + (a % b));
+		
+	}
+	
 	
 }
