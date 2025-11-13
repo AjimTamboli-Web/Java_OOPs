@@ -1,5 +1,9 @@
 package java_OOPs.Abstractions;
 /*
+ * When you add a new method inside an interface before java8 you had a compulsion to override that method in all the implementing classes normally
+    code would break, to over come this problem starting from java 8, java provide a feature biding the default methods so that the implementing classes
+     would either go implementing classes or override the methods as per there own business logic these feature is called as
+     backward compability in java.
  * Since Java 8, it can have default and static methods also.
  *⏺️ Default - methods provide implementation inside the interface,Useful for adding new methods to interfaces without breaking existing implementations.
   ⏺️ Static - while static methods belong to the interface itself,and are not inherited by implementing classes.
