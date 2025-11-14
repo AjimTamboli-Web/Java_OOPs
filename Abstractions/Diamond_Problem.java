@@ -5,7 +5,9 @@ package java_OOPs.Abstractions;
  * The Diamond Problem happens in multiple inheritance, when two parent classes have a method with the same name,
 		     and a child class tries to inherit from both.
  * Java does not allow multiple inheritance with classes (only single inheritance),allowed in only interface.
- * 		     
+ * How to fix it? -> Override the method and use **InterfaceName.super.method()** to specify which one to call.	  
+  						Through default methods with bodies in interfaces.   
+ * 
  */
 public class Diamond_Problem {
 
@@ -18,8 +20,8 @@ public class Diamond_Problem {
                                      //                 pro           when create a object of Problem class
 }                                    //               /     \            it confuse which one to call
                                      //              /       \ 
-interface I_one{						//            I_one    I_two        same method different return type
-//	void run();                     //               \       /   
+interface I_one{	  				    //            I_one    I_two        same method different return type
+	void run();                     //               \       /   
 }                                   //                \     /
 interface I_two{                    //                Problem    implements both 
 	int run();
@@ -46,13 +48,13 @@ class Problem implements I_one,I_two,I_three,I_four{
 
 // Java lets you use InterfaceName.super.methodName() to call a specific interface’s method.
 	// This resolves the ambiguity safely.
-@Override
-//resolve conflict by overriding
-public void jump() {
+   @Override
+    //resolve conflict by overriding
+    public void jump() {
 	// Explicitly call one of them
-	I_four.super.jump();      // I_three.super.jump();
-     System.out.println("Jump from Problem class.");
-}
+	  I_four.super.jump();      // I_three.super.jump();    // This way, Java safely handles multiple inheritance with interfaces.
+      System.out.println("Jump from Problem class.Resolve it"); 
+    }
 	
 	
 }
