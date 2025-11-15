@@ -21,7 +21,7 @@ public class Diamond_Problem {
 }                                    //               /     \            it confuse which one to call
                                      //              /       \ 
 interface I_one{	  				    //            I_one    I_two        same method different return type
-	void run();                     //               \       /   
+//	void run();                     //               \       /   
 }                                   //                \     /
 interface I_two{                    //                Problem    implements both 
 	int run();
