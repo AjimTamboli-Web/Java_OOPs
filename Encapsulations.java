@@ -5,7 +5,8 @@ package java_OOPs;
  *                   class variables/ attributes as private.
  *                   Provide public get and set methods to access and update the values of a private variables.
  *   Encapsulation means combining data and the functions that work on that data into a single unit, like a class.                
- *   - Better control of class attributes and methods. increase the security of data.                
+ *   - Better control of class attributes and methods. increase the security of data.  
+ *   it is use to achieve data security private access modifier is widely use in encapsulation.              
  */  
 
 public class Encapsulations {
